@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/stefxmas/meet/static/css/main.f855e6bc.css",
+    "main.js": "/stefxmas/meet/static/js/main.c5ac42a8.js",
+    "static/js/453.4a9980c6.chunk.js": "/stefxmas/meet/static/js/453.4a9980c6.chunk.js",
+    "service-worker.js": "/stefxmas/meet/service-worker.js",
+    "static/media/logo.svg": "/stefxmas/meet/static/media/logo.103b5fa18196d5665a7e12318285c916.svg",
+    "index.html": "/stefxmas/meet/index.html",
+    "main.f855e6bc.css.map": "/stefxmas/meet/static/css/main.f855e6bc.css.map",
+    "main.c5ac42a8.js.map": "/stefxmas/meet/static/js/main.c5ac42a8.js.map",
+    "453.4a9980c6.chunk.js.map": "/stefxmas/meet/static/js/453.4a9980c6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.c5ac42a8.js"
+  ]
+}
