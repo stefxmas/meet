@@ -21,4 +21,10 @@ functions:
     events:
       - http:
           path: api/get-auth-url
-          method: GET
+          method: get
+  getAccessToken:
+    handler: handler.getAccessToken
+    events:
+      - http:
+          path: api/token/{code}
+          method: get
