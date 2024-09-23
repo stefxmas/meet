@@ -1,8 +1,9 @@
 // 'use strict';
 
 const { google } = require("googleapis");
+const calendar = google.calendar("v3");
 const SCOPES = ["https://www.googleapis.com/auth/calendar.events.public.readonly"];
-const { CLIENT_SECRET, CLIENT_ID } = process.env; // Removed CALENDAR_ID since it's not used
+const { CLIENT_SECRET, CLIENT_ID, CALENDAR_ID } = process.env; // Removed CALENDAR_ID since it's not used
 const redirect_uris = [
   "https://stefxmas.github.io/meet/"
 ];
@@ -61,4 +62,47 @@ module.exports.getAccessToken = async (event) => {
       body: JSON.stringify({ error: error.message }),
     };
   }
+};
+
+module.exports.getCalendarEvents = async (event) => {
+  const access_token = decodeURIComponent(`${event.pathParameters.access_token}`);
+
+  // Set the access token as credentials in oAuth2Client
+  oAuth2Client.setCredentials({ access_token });
+  
+  return new Promise((resolve, reject) => {
+    // Access Google Calendar API to list events
+    calendar.events.list(
+      {
+        calendarId: CALENDAR_ID,
+        auth: oAuth2Client,
+        timeMin: new Date().toISOString(),
+        singleEvents: true,
+        orderBy: "startTime",
+      },
+      (error, response) => {
+        if (error) {
+          reject(error);
+        } else {
+          resolve(response);
+        }
+      }
+    );
+  })
+    .then((events) => {
+      return {
+        statusCode: 200,
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Credentials': true,
+        },
+        body: JSON.stringify(events),
+      };
+    })
+    .catch((error) => {
+      return {
+        statusCode: 500,
+        body: JSON.stringify({ error: error.message }),
+      };
+    });
 };
