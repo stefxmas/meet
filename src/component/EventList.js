@@ -1,13 +1,13 @@
-// import './App.css';
+import Event from "./Event";
 
-function EventList() {
-  return (
-    <div id="event-list">
-    <ul>
-     <li>event</li>
-      </ul>
-       </div>
-  );
+const EventList = ({ events }) => {
+ return (
+   <ul id="event-list">
+     {events ?
+       events.map(event => <Event key={event.id} event={event} />) :
+       null}
+   </ul>
+ );
 }
 
 export default EventList;
