@@ -24,3 +24,4 @@ describe('<CitySearch /> component', () => {
 
     expect(cityTextBox).toHaveValue(BerlinGermanySuggestion.textContent);
   });
+});
