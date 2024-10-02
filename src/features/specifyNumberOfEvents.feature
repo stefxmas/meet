@@ -1,10 +1,10 @@
-Feature: specify nuber of events
+Feature: specify number of events 
 Scenario: 33 events are showed by default 
 Given user open the app 
-When user doesnt scpacity a number 
-Then 33 events are showed by default
+When user doesn't specify a number  
+Then 33 events are shown by default 
 
-Scenario: user can change number of events
-Given user open the app 
-When user scpacity a number of event 
-Then specified nuber of events are showed 
+Scenario: The user can change the number of events 
+Given that the user opens the app  
+When the user specifies a number of events  
+Then specified number of events are shown 
