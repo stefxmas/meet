@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import { getEvents } from '../api';
-import Event from '../component/event';
 import mockData from '../mock-data';
+import Event from '../component/Event';
 // import EventList from '../components/EventList';
 
 describe('<Event /> component', () => {
