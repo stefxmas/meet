@@ -1,11 +1,12 @@
 /* eslint-disable jsx-a11y/no-redundant-roles */
 import React, { useState } from 'react';
 
-const NumberOfEvents = () => {
-  const [numEvents, setNumEvents] = useState(33);
+const NumberOfEvents = ({currentNOE = 33, setCurrentNOE}) => {
+  const [ setNumEvents] = useState(33);
 
   const handleInputChanged = (event) => {
     const value = event.target.value;
+    setCurrentNOE(value);
     setNumEvents(value);
   };
 
@@ -15,7 +16,7 @@ const NumberOfEvents = () => {
         type="number"
         className="number"
         role="textbox"
-        value={numEvents}
+        value={currentNOE}
         onChange={handleInputChanged}
       />
     </div>
