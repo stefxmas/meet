@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react';
 import { extractLocations, getEvents } from './api';
-
-
 import './App.css';
 import CitySearch from './component/CitySearch';
 import NumberOfEvents from './component/NumberOfEvents';
