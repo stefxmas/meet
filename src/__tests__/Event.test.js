@@ -15,4 +15,5 @@ describe('<Event /> component', () => {
   expect(EventComponent.queryByText(mockData[0].summary)).toBeInTheDocument();
 });
 
+
 });
