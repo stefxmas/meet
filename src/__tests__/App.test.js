@@ -1,4 +1,4 @@
-import { render, within } from '@testing-library/react';
+import { render, within, waitFor, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { getEvents } from '../api';
 import App from '../App';
@@ -53,3 +53,19 @@ test('renders a list of events matching the city selected by the user', async ()
   expect(event.textContent).toContain("Berlin, Germany");
 });
 });
+
+test('number of events per page changes according to what user types', async () => {
+  render(<App />);
+
+// Select the input field using screen.getByRole
+const NumberOfEventsInput = document.querySelector('input.number'); 
+
+// Clear the input field and type "10"
+await userEvent.clear(NumberOfEventsInput);
+await userEvent.type(NumberOfEventsInput, "10");
+
+// Wait for the number of events to update and then check the length of the event list
+const events = await screen.findAllByRole('listitem'); // Adjust role if necessary
+expect(events).toHaveLength(10); // Check that 10 events are rendered
+});
+
