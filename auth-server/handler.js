@@ -5,7 +5,7 @@ const calendar = google.calendar("v3");
 const SCOPES = ["https://www.googleapis.com/auth/calendar.events.public.readonly"];
 const { CLIENT_SECRET, CLIENT_ID, CALENDAR_ID } = process.env; // Removed CALENDAR_ID since it's not used
 const redirect_uris = [
-  "https://stefxmas.github.io/meet/"
+  "https://warm-genie-73b0fc.netlify.app"
 ];
 
 const oAuth2Client = new google.auth.OAuth2(
