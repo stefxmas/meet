@@ -19,21 +19,22 @@ export const extractLocations = (events) => {
  * This function will fetch the list of all events
  */
 export const getEvents = async () => {
-  if (window.location.href.startsWith("http://localhost")) {
+  // if (window.location.href.startsWith("http://localhost")) {
     return mockData;
-  }
+  // }
 
-  const token = await getAccessToken();
+  // const token = await getAccessToken();
 
-  if (token) {
-    removeQuery();
-    const url =  "https://de17z49gj7.execute-api.us-east-1.amazonaws.com/dev/api/get-events" + "/" + token;
-    const response = await fetch(url);
-    const result = await response.json();
-    if (result) {
-      return result.events;
-    } else return null; 
-  }
+  // if (token) {
+  //   removeQuery();
+  //   const url =  "https://de17z49gj7.execute-api.us-east-1.amazonaws.com/dev/api/get-events" + "/" + token;
+  //   const response = await fetch(url);
+  //   const result = await response.json();
+  //   console.log(result)
+  //   if (result) {
+  //     return result.events;
+  //   } else return null; 
+  // }
 };
 
 const removeQuery = () => {
