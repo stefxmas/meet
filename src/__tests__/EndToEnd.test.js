@@ -10,6 +10,9 @@ describe('<App /> component', () => {
             const page = await browser.newPage(); // Opens a new tab
             await page.goto('http://localhost:3000'); // Navigates to https://example.com
             await page.waitForSelector("#event-list");
+            const events = await page.$("#event-list");
+            expect(events).toBeNull();
+
             await browser.close(); // Closes the browser
           })();
 
