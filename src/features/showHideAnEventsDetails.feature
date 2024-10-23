@@ -13,4 +13,4 @@ Then the user should see the hidden event expand to view.
 Scenario: User can collapse an event to hide details.
 Given the event is expanded and it's visible
 When user click then hide event button
-Then user should see the event collape and hidden
+Then user should see the event collapse and hidden

@@ -44,10 +44,11 @@ defineFeature(feature, (test) => {
       await user.click(showDetails);
     });
 
-    then('the user should see the hidden event expand to view.', () => {
-      const eventDetails = EventComponent.container.querySelector('.details');
-      expect(eventDetails).toBeInTheDocument(); 
-
+    then('the user should see the hidden event expand to view.', async () => {
+      await waitFor(() => {
+        const eventDetails = EventComponent.container.querySelector('.eventDetails');
+        expect(eventDetails).toBeInTheDocument();
+      });
     });
   });
   
@@ -59,15 +60,15 @@ defineFeature(feature, (test) => {
       EventComponent = render(<Event event={allEvents[0]} />);
     });
 
-    when('user click then hide event button', () => {
+    when('user click then hide event button', async () => {
       const user = userEvent.setup();
       const hideDetails = EventComponent.queryByText('Hide Details');  
-      user.click(hideDetails); 
+      await user.click(hideDetails); 
     });
 
-    then('user should see the event collape and hidden', () => { 
+    then('user should see the event collapse and hidden', () => { 
       const eventDetails = EventComponent.container.querySelector('.details');
       expect(eventDetails).not.toBeInTheDocument(); 
     });
-}); 
-}); 
+  });
+});
