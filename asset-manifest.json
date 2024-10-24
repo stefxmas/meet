@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/stefxmas/meet/static/css/main.f855e6bc.css",
-    "main.js": "/stefxmas/meet/static/js/main.4e850fc3.js",
-    "static/js/453.4a9980c6.chunk.js": "/stefxmas/meet/static/js/453.4a9980c6.chunk.js",
-    "service-worker.js": "/stefxmas/meet/service-worker.js",
-    "index.html": "/stefxmas/meet/index.html",
-    "main.f855e6bc.css.map": "/stefxmas/meet/static/css/main.f855e6bc.css.map",
-    "main.4e850fc3.js.map": "/stefxmas/meet/static/js/main.4e850fc3.js.map",
-    "453.4a9980c6.chunk.js.map": "/stefxmas/meet/static/js/453.4a9980c6.chunk.js.map"
+    "main.css": "/static/css/main.edb5de07.css",
+    "main.js": "/static/js/main.a79f6d0c.js",
+    "static/js/453.4a9980c6.chunk.js": "/static/js/453.4a9980c6.chunk.js",
+    "service-worker.js": "/service-worker.js",
+    "index.html": "/index.html",
+    "main.edb5de07.css.map": "/static/css/main.edb5de07.css.map",
+    "main.a79f6d0c.js.map": "/static/js/main.a79f6d0c.js.map",
+    "453.4a9980c6.chunk.js.map": "/static/js/453.4a9980c6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.4e850fc3.js"
+    "static/css/main.edb5de07.css",
+    "static/js/main.a79f6d0c.js"
   ]
 }
