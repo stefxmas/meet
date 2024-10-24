@@ -1,7 +1,7 @@
 Feature: specify number of events 
 Scenario: 33 events are showed by default 
 Given user open the app 
-When user doesn't specify a number  
+When user doesnt specify a number  
 Then 33 events are shown by default 
 
 Scenario: The user can change the number of events 
