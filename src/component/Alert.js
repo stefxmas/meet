@@ -42,13 +42,6 @@ class InfoAlert extends Alert {
 }
 
 // Example usage of InfoAlert
-function App() {
-  return (
-    <div>
-      <InfoAlert text="This is an info alert!" />
-    </div>
-  );
-}
 
 class ErrorAlert extends Alert {
     constructor(props) {
@@ -58,14 +51,7 @@ class ErrorAlert extends Alert {
     }
   }
 
-  function App() {
-    return (
-      <div>
-        <ErrorAlert text="This is an error alert!" />
-      </div>
-    );
-  }
 
 
 
-export default App;
+export {InfoAlert, ErrorAlert};
