@@ -4,6 +4,7 @@ import CitySearch from '../component/CitySearch';
 import { extractLocations, getEvents } from '../api';
 import App from '../App';
 
+
 describe('<CitySearch /> component', () => {
   let CitySearchComponent;
   let setCurrentCity;
@@ -17,8 +18,9 @@ describe('<CitySearch /> component', () => {
 
     CitySearchComponent = render(
       <CitySearch 
-        allLocations={allLocations} 
-        setCurrentCity={setCurrentCity} 
+      allLocations={allLocations} // Pass the allLocations to the component
+      setCurrentCity={setCurrentCity} // Use the mocked setCurrentCity function
+      setInfoAlert={() => { }}
       />
     );
   });

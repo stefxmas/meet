@@ -50,4 +50,22 @@ function App() {
   );
 }
 
+class ErrorAlert extends Alert {
+    constructor(props) {
+      super(props);
+      this.color = 'rgb(0, 0, 255)'; // blue
+      this.bgColor = 'rgb(220, 220, 255)'; // light blue
+    }
+  }
+
+  function App() {
+    return (
+      <div>
+        <ErrorAlert text="This is an error alert!" />
+      </div>
+    );
+  }
+
+
+
 export default App;
