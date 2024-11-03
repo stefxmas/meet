@@ -3,11 +3,17 @@ import React, { useState } from 'react';
 
 const NumberOfEvents = ({currentNOE = 33, setCurrentNOE}) => {
   const [ numEvents, setNumEvents] = useState(currentNOE);
-
+  const [errorMessage, setErrorMessage] = useState("");
   const handleInputChanged = (event) => {
     const value = event.target.value;
-    setCurrentNOE(value);
-    setNumEvents(value);
+    if (isNaN(value) || value <= 0) {
+      setErrorMessage("Please enter a number greater than 0");
+    } else {
+      setErrorMessage(""); // Clear error message if input is valid
+      setNumEvents(value);
+      setCurrentNOE(value); // Update the number of events in parent component
+    }
+    
   };
 
   return (
@@ -19,6 +25,8 @@ const NumberOfEvents = ({currentNOE = 33, setCurrentNOE}) => {
         value={numEvents}
         onChange={handleInputChanged}
       />
+
+        {errorMessage && <div className="error-message">{errorMessage}</div>}
     </div>
   );
 };
