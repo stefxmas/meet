@@ -36,13 +36,13 @@ defineFeature(feature, (test) => {
       const numberOfEventsInput = AppComponent.container.querySelector('.number'); // Select the input field using the class
 
       await user.clear(numberOfEventsInput); // Clear the input field
-      await user.type(numberOfEventsInput, '3'); // Type '3' to set the number of events to 3
+      await user.type(numberOfEventsInput, '35'); // Type '3' to set the number of events to 3
     });
 
     then('specified number of events are shown', async () => {
       await waitFor(() => {
         const EventListItems = within(AppComponent.container).queryAllByRole('listitem');
-        expect(EventListItems.length).toBe(3); // Expect 3 events to be displayed
+        expect(EventListItems.length).toBe(35); // Expect 3 events to be displayed
       });
     });
   });

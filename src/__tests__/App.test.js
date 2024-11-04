@@ -62,10 +62,10 @@ const NumberOfEventsInput = document.querySelector('input.number');
 
 // Clear the input field and type "10"
 await userEvent.clear(NumberOfEventsInput);
-await userEvent.type(NumberOfEventsInput, "10");
+await userEvent.type(NumberOfEventsInput, "35");
 
 // Wait for the number of events to update and then check the length of the event list
 const events = await screen.findAllByRole('listitem'); // Adjust role if necessary
-expect(events).toHaveLength(10); // Check that 10 events are rendered
+expect(events).toHaveLength(35); // Check that 10 events are rendered
 });
 

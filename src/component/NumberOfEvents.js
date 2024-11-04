@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/no-redundant-roles */
 import React, { useState } from 'react';
 
-const NumberOfEvents = ({currentNOE = 33, setCurrentNOE}) => {
+const NumberOfEvents = ({currentNOE, setCurrentNOE}) => {
   const [ numEvents, setNumEvents] = useState(currentNOE);
   const [errorMessage, setErrorMessage] = useState("");
   const handleInputChanged = (event) => {
@@ -19,7 +19,7 @@ const NumberOfEvents = ({currentNOE = 33, setCurrentNOE}) => {
   return (
     <div id="number-of-events">
       <input
-        type="number"
+        type="text"
         className="number"
         role="textbox"
         value={numEvents}
@@ -32,3 +32,4 @@ const NumberOfEvents = ({currentNOE = 33, setCurrentNOE}) => {
 };
 
 export default NumberOfEvents;
+
