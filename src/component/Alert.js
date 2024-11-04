@@ -41,17 +41,13 @@ class InfoAlert extends Alert {
   }
 }
 
-// Example usage of InfoAlert
-
 class ErrorAlert extends Alert {
     constructor(props) {
       super(props);
-      this.color = 'rgb(0, 0, 255)'; // blue
-      this.bgColor = 'rgb(220, 220, 255)'; // light blue
+      this.color = 'blue'; // blue
+      this.bgColor = 'blue'; // light blue
     }
   }
-
-
 
 
 export {InfoAlert, ErrorAlert};
