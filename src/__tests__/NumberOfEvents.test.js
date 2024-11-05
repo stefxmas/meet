@@ -17,13 +17,13 @@ describe('<NumberOfEvents /> component', () => {
     const allEvents = await getEvents();
     
     // Ensure the input's default value is 33
-    expect(NumberOfEventsComponent.getByRole('textbox').value).toBe('33');
+    expect(NumberOfEventsComponent.getByRole('textbox').value).toBe('35');
 
     //Render only the first 33 events
-    EventListComponent.rerender(<EventList events={allEvents.slice(0, 33)} />);
+    EventListComponent.rerender(<EventList events={allEvents.slice(0, 35)} />);
     
     //Ensure the EventList shows 33 events by default
-    expect(EventListComponent.getAllByRole('listitem')).toHaveLength(33);
+    expect(EventListComponent.getAllByRole('listitem')).toHaveLength(35);
   });
 
   // Scenario 2: The user can change the number of events
@@ -33,13 +33,14 @@ describe('<NumberOfEvents /> component', () => {
 
     // Simulate changing the number of events to 10
     const input = NumberOfEventsComponent.getByRole('textbox');
-    
+    await user.clear(input); // Clear the input
+    await user.type(input, '35'); // Type 10 into the input field
 
     // Rerender the EventList with the new number of events
     EventListComponent.rerender(<EventList events={allEvents.slice(0, 10)} />);
     
     // Ensure the input value changed to 10
-    expect(input.value).toBe('33');
+    expect(input.value).toBe('35');
 
     // Ensure the EventList now shows only 10 events
     expect(EventListComponent.getAllByRole('listitem')).toHaveLength(10);

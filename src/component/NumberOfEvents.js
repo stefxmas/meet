@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/no-redundant-roles */
 import React, { useState } from 'react';
 
-const NumberOfEvents = ({currentNOE, setCurrentNOE, setErrorAlert}) => {
+const NumberOfEvents = ({currentNOE =35, setCurrentNOE, setErrorAlert}) => {
   const [ numEvents, setNumEvents] = useState(currentNOE);
   
   const handleInputChanged = (event) => {
