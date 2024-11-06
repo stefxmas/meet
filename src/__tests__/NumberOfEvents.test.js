@@ -37,12 +37,12 @@ describe('<NumberOfEvents /> component', () => {
     await user.type(input, '35'); // Type 10 into the input field
 
     // Rerender the EventList with the new number of events
-    EventListComponent.rerender(<EventList events={allEvents.slice(0, 10)} />);
+    EventListComponent.rerender(<EventList events={allEvents.slice(0, 35)} />);
     
     // Ensure the input value changed to 10
     expect(input.value).toBe('35');
 
     // Ensure the EventList now shows only 10 events
-    expect(EventListComponent.getAllByRole('listitem')).toHaveLength(10);
+    expect(EventListComponent.getAllByRole('listitem')).toHaveLength(35);
   });
 });
