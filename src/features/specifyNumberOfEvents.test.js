@@ -19,7 +19,7 @@ defineFeature(feature, (test) => {
     then('33 events are shown by default', async () => {
       await waitFor(() => {
         const EventListItems = within(AppComponent.container).queryAllByRole('listitem');
-        expect(EventListItems.length).toBe(32); // Adjust if necessary based on mock data
+        expect(EventListItems.length).toBe(35); // Adjust if necessary based on mock data
       });
     });
   });

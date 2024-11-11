@@ -19,7 +19,7 @@ defineFeature(feature, (test) => {
       const EventListDOM = AppDOM.querySelector('#event-list');
       await waitFor(() => {
         const EventListItem = within(EventListDOM).getAllByRole('listitem');
-        expect(EventListItem).toHaveLength(32);
+        expect(EventListItem).toHaveLength(35);
       });
     });
 

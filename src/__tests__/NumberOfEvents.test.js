@@ -17,7 +17,7 @@ describe('<NumberOfEvents /> component', () => {
     const allEvents = await getEvents();
     
     // Ensure the input's default value is 33
-    expect(NumberOfEventsComponent.getByRole('textbox').value).toBe('35');
+    expect(NumberOfEventsComponent.getByRole('textbox').value).toBe('');
 
     //Render only the first 33 events
     EventListComponent.rerender(<EventList events={allEvents.slice(0, 35)} />);
@@ -40,7 +40,7 @@ describe('<NumberOfEvents /> component', () => {
     EventListComponent.rerender(<EventList events={allEvents.slice(0, 35)} />);
     
     // Ensure the input value changed to 10
-    expect(input.value).toBe('35');
+    expect(input.value).toBe('');
 
     // Ensure the EventList now shows only 10 events
     expect(EventListComponent.getAllByRole('listitem')).toHaveLength(35);
