@@ -6,12 +6,14 @@ const NumberOfEvents = ({currentNOE, setCurrentNOE, setErrorAlert}) => {
   
   const handleInputChanged = (event) => {
     const value = event.target.value;
+    setNumEvents(value);
+    setCurrentNOE(value);
     if (isNaN(value) || value <= 0) {
       setErrorAlert("Please enter a number greater than 0");
     } else {
       setErrorAlert(""); // Clear error message if input is valid
       setNumEvents(value);
-      setCurrentNOE(value); // Update the number of events in parent component
+      // setCurrentNOE(value); // Update the number of events in parent component
     }
     
   };
