@@ -35,6 +35,18 @@
       <button id="getToken">Get Token</button>
       <p id="accessToken"></p>
 
+
+
+
+
+      <h4>Step 3: Get the calendar events using your access token</h4>
+      <button id="getEvents">Get Events</button>
+      <p id="events"></p>
+
+
+
+      
+
     <script type="text/javascript">
       const getAuthUrlButton = document.getElementById("getAuthUrlButton");
       const resultElement = document.getElementById("result");
@@ -78,11 +90,15 @@
             accessTokenElement.innerText = JSON.stringify(json);
           });
       };
-"https://de17z49gj7.execute-api.us-east-1.amazonaws.com/dev/api/get-events/"
-      const getEvents = document.getElementById("getEvents");
-      const events = document.getElementById("events");
-      const getCalendarEvents = 
+// "https://de17z49gj7.execute-api.us-east-1.amazonaws.com/dev/api/get-events/"
+      // const getEvents = document.getElementById("getEvents");
+      // const events = document.getElementById("events");
+      // const getCalendarEvents = 
     //   {access_token} maybe go after get-events
+
+    const getEvents = document.getElementById("getEvents");
+    const events = document.getElementById("events");
+    const getCalendarEvents = "https://de17z49gj7.execute-api.us-east-1.amazonaws.com/dev/api/get-events";
 
       getEvents.onclick = function () {
         const { access_token } = JSON.parse(accessTokenElement.innerText);
