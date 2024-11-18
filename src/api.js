@@ -31,6 +31,7 @@ export const getEvents = async () => {
     removeQuery();
     const url =  "https://de17z49gj7.execute-api.us-east-1.amazonaws.com/dev/api/get-events" + "/" + token;
     const response = await fetch(url);
+    console.log(response)
     const result = await response.json();
     console.log(result)
     if (result) {
