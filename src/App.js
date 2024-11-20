@@ -5,7 +5,7 @@ import CitySearch from './component/CitySearch';
 import NumberOfEvents from './component/NumberOfEvents';
 import EventList from './component/EventList';
 import { InfoAlert, ErrorAlert, WarningAlert } from './component/Alert';
-import { CityEventsChart} from './component/CityEventsChart';
+import  CityEventsChart  from './component/CityEventsChart';
 
 const App = () => {
   const [events, setEvents] = useState([]);
